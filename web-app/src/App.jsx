@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import './App.css'
+import Dashboard from './dashboard';
+
+function samePageLinkNavigation(event) {
+    if (
+        event.defaultPrevented ||
+        event.button !== 0 || // ignore everything but left-click
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey ||
+        event.shiftKey
+    ) {
+        return false;
+    }
+    return true;
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = React.useState(0)
+    const [value, setValue] = React.useState(0);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleChange = (event, newValue) => {
+        // event.type can be equal to focus with selectionFollowsFocus.
+        if (
+            event.type !== 'click' ||
+            (event.type === 'click' && samePageLinkNavigation(event))
+        ) {
+            setValue(newValue);
+        }
+    };
+
+    return (
+        <>
+        <Box sx={{ width: '100%' }}>
+        
+        <Tabs value={value} onChange={handleChange}>
+        <Tab label="Review Analyser" />
+        <Tab label="Sample Reviews" />
+        <Tab label="Analytics Dasboard" />
+        </Tabs>
+
+            {value === 2 && <Dashboard />}
+        </Box>
+        </>
+    )
 }
 
 export default App
