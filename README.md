@@ -14,22 +14,22 @@ The repository does not include the data folder, so include it with the required
 ## How to reproduce results
 
 ## Directory
-location-review-validator/
-|
-├── README.md
-├── data                    # includes raw data, labelled data and train and test data
-|   ├── train/
-|   ├── test/
-|   ├── restaurants-and-shops-detailed-reviews.csv
-|   ├── restaurants-and-shops-overview.csv
-├── notebooks
-|   ├── eda.ipynb           # Exploratory data analysis
-├── requirements.txt
-├── results                 # Tentatively contains evaluation metrics results and prediction results
-├── src                     # Data engineering and ML files
-|   ├── data_processing.py  # Handles data processing, cleaning
-├── venv
-└── web-app                 # Web app files
+location-review-validator/  
+│  
+├── README.md  
+├── data                    # includes raw data, labelled data and train and test data  
+│   ├── train/  
+│   ├── test/  
+│   ├── restaurants-and-shops-detailed-reviews.csv  
+│   ├── restaurants-and-shops-overview.csv  
+├── notebooks  
+│   ├── eda.ipynb           # Exploratory data analysis  
+├── requirements.txt  
+├── results                 # Tentatively contains evaluation metrics results and prediction results  
+├── src                     # Data engineering and ML files  
+│   ├── data_processing.py  # Handles data processing, cleaning  
+├── venv  
+└── web-app                 # Web app files  
 
 
 
