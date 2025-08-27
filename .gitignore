@@ -1,0 +1,8 @@
+# Byte compiled
+__pycache__/
+
+# Exclude virtual environment
+venv/
+
+# Exclude data
+data/
