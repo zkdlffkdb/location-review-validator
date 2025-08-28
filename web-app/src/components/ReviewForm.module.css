@@ -1,9 +1,30 @@
-.container {
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  padding: 1rem;
-  min-height: 100vh;
-  border-radius: 10px;
+.pageContainer {
+  display: flex;
+  align-items: stretch;
+  background: #FFFFFF;
+  width: 95%;
+  border-radius: 2%;
+  padding: 2rem;
+  color: #000000;
+  font-weight: bold;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin-top: 20px;
+}
+
+/* Make sure the fieldset doesn’t expand to 100% */
+.fieldset {
+  border: none;
+  width: auto;  /* shrink to fit content */
+}
+
+/* Form width */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 9999px; /* actual width that will be centered */
+  align-items: stretch;
+  width: 100%;
 }
 
 .title {
@@ -15,34 +36,24 @@
   padding: 0px 0.8rem;
 }
 
-.fieldset {
-  border: none;
-  max-width: 600px;
-  padding: 0px 1rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
 .shortinput {
   border: none;
   background-color: #d9d9d9;
   border-radius: 5px;
   font-size: 0.8rem;
-  width: 200px;
+  width: 100%;
   height: 20px;
+  color: #000000;
 }
 
 .input {
   border: none;
   background-color: #d9d9d9;
+  color: #000000;
   border-radius: 5px;
-  height: 40px;
+  height: 500px;
   resize: vertical;
-  width: 420px;
+  width: 100%;
 }
 
 .button {
@@ -52,9 +63,11 @@
   padding: 0.3rem 0.2rem;
   border-radius: 5px;
   cursor: pointer;
+  justify-content: center;
   transition: background 0.2s ease-in-out;
   text-align: center;
-  margin: 0 auto;
+  color: #000000;
+  font-weight: bold;
 }
 
 .button:hover {
@@ -76,6 +89,5 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  width: 420px;
-  gap: 1rem;
+  justify-content: center;
 }

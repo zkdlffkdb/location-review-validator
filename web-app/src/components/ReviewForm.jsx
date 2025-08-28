@@ -14,7 +14,7 @@ function ReviewForm() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.pageContainer}>
       <h1 className={styles.title}>Review Analyser</h1>
       <p className={styles.para}>
         enter a review and location details for analysis.

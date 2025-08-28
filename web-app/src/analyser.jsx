@@ -1,63 +1,12 @@
+import * as React from 'react';
+import ReviewForm from './components/ReviewForm';
+
 export default function ReviewAnalyser() {
     return (
 		<>
         <div>
-            <p>This is the Review Analyser tab</p>
+		<ReviewForm />
         </div>
-		<div>
-		<p> hi</p>
-		</div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<div>
-		<div>
-		<div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
-		<p> hi</p>
-		</div>
 		</>
     );
 }
