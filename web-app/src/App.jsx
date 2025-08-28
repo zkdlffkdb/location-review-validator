@@ -39,11 +39,11 @@ function App() {
 		<>
 		<div
 		style={{
-			width: "80%",           
+			width: "100%",           
+			display: "flex",
 			justifyContent: "center",
-			position: "fixed",      
-			top: '1%',             
-			left: '10%',
+			flexDirection: "column",
+			marginLeft: "30%",
 			backgroundColor: "#DDECFF",
 		}}
 		>
