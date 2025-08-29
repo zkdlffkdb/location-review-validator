@@ -63,9 +63,11 @@ function ReviewForm() {
               />
             </div>
 
-            <button type="submit" className={styles.button}>
-              Submit
-            </button>
+            <div className={styles.buttonRow}>
+              <button type="submit" className={styles.button}>
+                Submit
+              </button>
+            </div>
           </div>
         </form>
       </fieldset>

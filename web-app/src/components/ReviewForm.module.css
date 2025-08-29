@@ -1,9 +1,10 @@
 .pageContainer {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   align-items: stretch;
-  background: #FFFFFF;
+  background: #ffffff;
   width: 95%;
-  border-radius: 2%;
+  border-radius: 10px;
   padding: 2rem;
   color: #000000;
   font-weight: bold;
@@ -15,7 +16,7 @@
 /* Make sure the fieldset doesn’t expand to 100% */
 .fieldset {
   border: none;
-  width: auto;  /* shrink to fit content */
+  width: auto; /* shrink to fit content */
 }
 
 /* Form width */
@@ -33,7 +34,7 @@
 }
 
 .para {
-  padding: 0px 0.8rem;
+  padding-left: 0.8rem;
 }
 
 .shortinput {
@@ -51,7 +52,7 @@
   background-color: #d9d9d9;
   color: #000000;
   border-radius: 5px;
-  height: 500px;
+  height: 100px;
   resize: vertical;
   width: 100%;
 }
@@ -59,19 +60,25 @@
 .button {
   border: none;
   background-color: #d9d9d9;
-  width: 50px;
-  padding: 0.3rem 0.2rem;
+  width: fit-content;
+  padding-top: 0.3rem;
   border-radius: 5px;
   cursor: pointer;
   justify-content: center;
-  transition: background 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   text-align: center;
   color: #000000;
   font-weight: bold;
+  margin-top: 5px auto 0 auto;
 }
 
 .button:hover {
   background: #808080;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
 }
 
 .row {
@@ -84,6 +91,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-bottom: 5px;
 }
 
 .formContainer {
