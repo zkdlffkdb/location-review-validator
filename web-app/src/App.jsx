@@ -37,15 +37,7 @@ function App() {
 
 	return (
 		<>
-		<div
-		style={{
-			width: "100%",           
-			display: "flex",
-			justifyContent: "center",
-			flexDirection: "column",
-			backgroundColor: "#DDECFF",
-		}}
-		>
+		<div>
 		<h1>Intelligent Review Quality & Relevancy Detection</h1>
 		<Tabs value={value} onChange={handleChange} variant="fullWidth">
 		<Tab label="Review Analyser" />

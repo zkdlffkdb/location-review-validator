@@ -1,7 +1,7 @@
 import styles from "./ReviewForm.module.css";
 import { React, useState } from "react";
 
-function ReviewForm() {
+function ReviewForm({setResults, setLoading}) {
   const [loc, setLoc] = useState("");
   const [username, setUsername] = useState("");
   const [review, setReview] = useState("");
@@ -10,8 +10,19 @@ function ReviewForm() {
     e.preventDefault();
     console.log(loc, username, review);
 
+    setLoading(true)
     // add form logic to send input into ML machine / backend
+    // Simulate async backend call (replace with fetch/axios later)
+    setTimeout(() => {
+      setResults({
+        location: loc,
+        user: username || "Anonymous",
+        review: review,
+      });
+      setLoading(false);
+    }, 2000);
   };
+
 
   return (
     <div className={styles.pageContainer}>
