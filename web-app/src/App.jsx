@@ -43,7 +43,6 @@ function App() {
 			display: "flex",
 			justifyContent: "center",
 			flexDirection: "column",
-			marginLeft: "28%",
 			backgroundColor: "#DDECFF",
 		}}
 		>

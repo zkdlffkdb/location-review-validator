@@ -31,7 +31,7 @@ function ReviewForm() {
                   id="loc"
                   value={loc}
                   onChange={(e) => setLoc(e.target.value)}
-                  placeholder="enter location"
+                  placeholder=" enter location"
                   required
                   className={styles.shortinput}
                 />
@@ -44,7 +44,7 @@ function ReviewForm() {
                   id="username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="enter username"
+                  placeholder=" enter username"
                   className={styles.shortinput}
                 />
               </div>
@@ -57,7 +57,7 @@ function ReviewForm() {
                 id="review"
                 value={review}
                 onChange={(e) => setReview(e.target.value)}
-                placeholder="enter review"
+                placeholder=" enter review"
                 required
                 className={styles.input}
               />
