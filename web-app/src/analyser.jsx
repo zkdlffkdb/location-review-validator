@@ -13,12 +13,12 @@ export default function ReviewAnalyser() {
         </div>
         
         <div className="pageContainer">
-        <p>Review Analysis</p>
+        <h4>Review Analysis</h4>
                 {loading ? (
-          <p style={{ fontSize: "16px" }}>conducting analysis of review...</p>
+          <p>conducting analysis of review...</p>
         ) : results ? (
           <div>
-            <p style={{ fontSize: "16px" }}>Analysis Complete:</p>
+            <p>✅Analysis Complete:</p>
             <div className="greyContainer">
                <p> Location: {results.location}</p>
                <p> by: {results.user}</p>
@@ -26,7 +26,7 @@ export default function ReviewAnalyser() {
             </div>
           </div>
         ) : (
-          <p style={{ fontSize: "16px" }}>input a review above for analysis!</p>
+          <p style={{ fontSize: "16px", fontWeight: "normal" }}>input a review above for analysis!</p>
         )}
         </div>
 		</>

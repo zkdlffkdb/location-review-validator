@@ -27,7 +27,7 @@ function SampleCards() {
           <span className={`${styles.badge} ${styles.irrelevant}`}>
             Irrelevant
           </span>
-          <span>@ Yakiniku Like, Paya Lebar Quarter</span>
+          <span>@ Mixue, Yew Tee Point</span>
         </div>
         <p className={styles.rating}>Rating: 5/5</p>
         <p className={styles.reviewText}>

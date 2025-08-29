@@ -1,5 +1,5 @@
 .pageContainer {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inter";
   display: flex;
   align-items: stretch;
   background: #ffffff;
@@ -34,24 +34,26 @@
 
 .para {
   padding-left: 0.8rem;
+  font-weight: normal;
 }
 
 .shortinput {
   border: none;
   background-color: #d9d9d9;
   border-radius: 5px;
-  font-size: 0.8rem;
   width: 100%;
   height: 20px;
   color: #000000;
 }
 
 .input {
+  font-family: "Inter";
   border: none;
   background-color: #d9d9d9;
   color: #000000;
   border-radius: 5px;
-  height: 100px;
+  width: 100%;
+  height: 120px;
   resize: vertical;
   width: 100%;
 }

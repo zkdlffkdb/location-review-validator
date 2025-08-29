@@ -1,4 +1,5 @@
 #root {
+    font-family: "Inter";
   width: 100%;
   height: 100%;
   text-align: center;
@@ -8,7 +9,7 @@
 }
 
 .pageContainer {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inter";
   font-weight: bold;
   font-size: 1.5rem;
   align-items: stretch;
@@ -21,7 +22,7 @@
 }
 
 .greyContainer {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inter";
   font-weight: normal;
   font-size: 0.9rem;
   line-height: 1rem;
@@ -45,10 +46,13 @@ h1 {
 
 p {
 	color: #000000;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 /* Tabs container */
 .MuiTabs-root {
+  font-family: "Inter";
   background-color: #FFFFFF;
   border-radius: 9999px;
 }

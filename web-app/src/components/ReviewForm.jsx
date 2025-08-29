@@ -36,7 +36,7 @@ function ReviewForm({setResults, setLoading}) {
             <div className={styles.row}>
               <div className={styles.fieldGroup}>
                 <label htmlFor="loc">Location*</label>
-                <input
+                <input 
                   type="text"
                   name="loc"
                   id="loc"

@@ -1,13 +1,12 @@
 .cardsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 20px;
   padding: 20px;
+  align-items: stretch;
 }
 
 .reviewCard {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bold;
+  font-family: "Inter";
   font-size: 1.5rem;
   display: flex;
   align-items: stretch;
