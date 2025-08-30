@@ -7,7 +7,7 @@ url = "http://127.0.0.1:5000/predict"
 # Sample data to send to the API. 
 # Make sure to include all the numerical features that the model expects.
 sample_data = {
-    "review_text": "yay",
+    "review_text": "this is a good place with excellent service.",
     "rating_person": 5.0,
     "main_category": "Restaurant",
     "can_claim": 1,

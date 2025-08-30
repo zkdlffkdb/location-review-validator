@@ -3,6 +3,7 @@ __pycache__/
 
 # Exclude virtual environment
 venv/
+.venv/
 
 # Exclude data
 data/
