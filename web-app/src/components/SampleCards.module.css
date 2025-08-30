@@ -1,0 +1,55 @@
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+.reviewCard {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  width: 80%;
+  border-radius: 10px;
+  color: #000000;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.rating {
+  font-size: 0.9rem;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.legitimate {
+  background-color: #98eda2;
+}
+
+.irrelevant {
+  background-color: #ed9898;
+}
+
+.reviewText {
+  font-size: 0.9rem;
+}
