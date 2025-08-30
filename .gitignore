@@ -7,3 +7,6 @@ venv/
 
 # Exclude data
 data/
+
+# Exclude node_modules
+node_modules
