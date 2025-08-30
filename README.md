@@ -5,9 +5,10 @@ Project for TikTok TechJam 2025 by 4/5Bza
 
 ## Setup instructions
 - On initial setup, run `python -m venv venv`  
-- Install requirements on  the virtual environment with `pip install -r requirements.txt` (note that the repository uses Python 3.12)  
+- Install requirements on the virtual environment with `pip install -r requirements.txt` (note that the repository uses Python 3.12)  
 - (For devs) The repository does not include the data folder, so include it with the required data as per the directory.  
 - To run the backend, run `python ./src/main.py` to startup the backend server
+- To run the frontend, navigate to the web-app directory and run `npm run dev `.
 
 **This repository uses Git LFS for large model files**  
 _if the model.safetensors is not there, ensure you have git lfs installed_
