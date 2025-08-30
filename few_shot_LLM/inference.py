@@ -29,18 +29,18 @@ def load_few_shot_prompt():
 def answer_question(question):
     """Answer questions using OpenRouter API with gpt-5-nano and few-shot examples."""
     load_env()
-    api_key = os.getenv('OPENROUTER_API_KEY')
-    if not api_key:
-        return "Error: OPENROUTER_API_KEY not found in .env file"
     
+    hf_token = os.getenv('HF_TOKEN')  # Hugging Face API token
+    if not hf_token:
+        return "Error: HF_TOKEN not found in .env file"
+        
     # Load few-shot prompt
     system_prompt = load_few_shot_prompt()
     
-    url = "https://openrouter.ai/api/v1/chat/completions"
+    API_URL = "https://router.huggingface.co/v1/chat/completions"
     
     headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
+            "Authorization": f"Bearer {os.environ['HF_TOKEN']}",
     }
     
     # Build messages with system prompt and user question
@@ -50,14 +50,14 @@ def answer_question(question):
     ]
     
     payload = {
-        "model": "openai/gpt-5-mini",
+        "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct:fireworks-ai",  # Use the Qwen model
         "messages": messages,
-        "max_tokens": 8192, # enough for label + reasoning
+        "max_tokens": 150, # enough for label + reasoning
         "temperature": 0
     }
     
     try:
-        response = requests.post(url, headers=headers, json=payload, timeout=30)
+        response = requests.post(API_URL, headers=headers, json=payload, timeout=30)
         response.raise_for_status()
 
         data = response.json()
