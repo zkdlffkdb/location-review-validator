@@ -3,6 +3,7 @@
 import argparse
 import os
 import requests
+import json
 
 def load_env():
     """Load environment variables from .env file."""
@@ -77,10 +78,17 @@ def answer_question(question):
         # Force output to be exactly one valid label
         for label in valid_labels:
             if label.lower() in answer.lower():
-                return label
+                result = {"label": label}
+                break
+        else:
+            # Fallback if nothing matches
+            result = {"label": "Irrelevant content"}
         
-        # Fallback if nothing matches
-        return "Irrelevant content"
+        # Save the result to a JSON file
+        with open("result.json", "w") as json_file:
+            json.dump(result, json_file, indent=4)  # Write the result to a JSON file with indentation
+        
+        return result['label']
         
     except requests.exceptions.RequestException as e:
         return f"Error making API request: {e}"
