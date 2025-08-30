@@ -1,0 +1,64 @@
+{
+  "hash": "a1deccd0",
+  "configHash": "77a4650b",
+  "lockfileHash": "7868385f",
+  "browserHash": "8630f086",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "5b8600ae",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "7b0ad697",
+      "needsInterop": true
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "fe921113",
+      "needsInterop": true
+    },
+    "@mui/material/Box": {
+      "src": "../../node_modules/@mui/material/esm/Box/index.js",
+      "file": "@mui_material_Box.js",
+      "fileHash": "7ed23708",
+      "needsInterop": false
+    },
+    "@mui/material/Tabs": {
+      "src": "../../node_modules/@mui/material/esm/Tabs/index.js",
+      "file": "@mui_material_Tabs.js",
+      "fileHash": "646411e4",
+      "needsInterop": false
+    },
+    "@mui/material/Tab": {
+      "src": "../../node_modules/@mui/material/esm/Tab/index.js",
+      "file": "@mui_material_Tab.js",
+      "fileHash": "10e5d06d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-H5VGUWAR": {
+      "file": "chunk-H5VGUWAR.js"
+    },
+    "chunk-IIT576ZH": {
+      "file": "chunk-IIT576ZH.js"
+    },
+    "chunk-HVUPW2F7": {
+      "file": "chunk-HVUPW2F7.js"
+    },
+    "chunk-3VDXVL42": {
+      "file": "chunk-3VDXVL42.js"
+    },
+    "chunk-2PGV36BO": {
+      "file": "chunk-2PGV36BO.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}

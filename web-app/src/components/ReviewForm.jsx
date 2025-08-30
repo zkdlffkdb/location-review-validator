@@ -4,73 +4,72 @@ import { React, useState } from "react";
 function ReviewForm({setResults, setLoading}) {
   const [loc, setLoc] = useState("");
   const [username, setUsername] = useState("");
-  const [review, setReview] = useState("");
+  const [file, setFile] = useState(null);
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(loc, username, review);
+  if (!file) {
+    alert("please upload a JSON file containing your review.");
+    return;
+  }
 
-    setLoading(true)
-    // add form logic to send input into ML machine / backend
-    // Simulate async backend call (replace with fetch/axios later)
+  setLoading(true);
+
+  try {
+    const text = await file.text(); 
+    const jsonData = JSON.parse(text);
+
+    console.log("Parsed JSON:", jsonData);
+
+    // simulate async backend
     setTimeout(() => {
       setResults({
-        location: loc,
-        user: username || "Anonymous",
-        review: review,
+        review: jsonData.review_text,
       });
       setLoading(false);
     }, 2000);
-  };
 
+  } catch (error) {
+    console.error("error processing file:", error);
+    alert("invalid JSON or server error");
+    setLoading(false);
+  }
+};
 
   return (
     <div className={styles.pageContainer}>
       <h1 className={styles.title}>Review Analyser</h1>
-      <p className={styles.para}>
-        enter a review and location details for analysis.
+       <p className={styles.para}>
+        submit a .json file in the following format for analysis:
       </p>
+      <pre style={{marginTop:'0px'}}>
+      {`
+      {
+    "review_text": string,
+    "rating_person": number [0.0,5.0],
+    "main_category": string,
+    "can_claim": number, {0|1},
+    "is_local_guide": number, {0|1},
+    "sentiment_polarity": number [0.0,1.0],
+    "sentiment_subjectivity": number [0.0,1.0]
+    }
+      `}
+      </pre>
       <fieldset className={styles.fieldset}>
-        <form className={styles.form} onSubmit={handleSubmit} method="get">
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formContainer}>
             <div className={styles.row}>
-              <div className={styles.fieldGroup}>
-                <label htmlFor="loc">Location*</label>
-                <input 
-                  type="text"
-                  name="loc"
-                  id="loc"
-                  value={loc}
-                  onChange={(e) => setLoc(e.target.value)}
-                  placeholder=" enter location"
-                  required
-                  className={styles.shortinput}
-                />
-              </div>
-              <div className={styles.fieldGroup}>
-                <label htmlFor="username">Username (optional)</label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder=" enter username"
-                  className={styles.shortinput}
-                />
-              </div>
             </div>
 
             <div className={styles.fieldGroup}>
-              <label htmlFor="review">Review*</label>
-              <textarea
-                name="review"
-                id="review"
-                value={review}
-                onChange={(e) => setReview(e.target.value)}
-                placeholder=" enter review"
+              <label htmlFor="file">JSON file containing review*</label>
+              <input
+                type="file"
+                accept=".json"
+                name="file"
+                id="file"
+                onChange={(e) => setFile(e.target.files[0])}
                 required
-                className={styles.input}
               />
             </div>
 
@@ -79,7 +78,7 @@ function ReviewForm({setResults, setLoading}) {
                 Submit
               </button>
             </div>
-          </div>
+      </div>
         </form>
       </fieldset>
     </div>

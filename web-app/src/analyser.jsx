@@ -20,8 +20,6 @@ export default function ReviewAnalyser() {
           <div>
             <p>✅Analysis Complete:</p>
             <div className="greyContainer">
-               <p> Location: {results.location}</p>
-               <p> by: {results.user}</p>
                <p> {results.review}</p>
             </div>
           </div>
