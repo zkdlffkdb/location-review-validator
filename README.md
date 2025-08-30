@@ -6,7 +6,8 @@ Project for TikTok TechJam 2025 by 4/5Bza
 ## Setup instructions
 On initial setup, run `python -m venv venv`  
 Install requirements on  the virtual environment with `pip install -r requirements`
-The repository does not include the data folder, so include it with the required data as per the directory.
+The repository does not include the data folder, so include it with the required data as per the directory.  
+To run the backend, run `python ./src/main.py` to startup the backend server
 
 ### Data Setup
 1. Run data_processing.py to get the data file for labelling and analysis
@@ -25,7 +26,9 @@ location-review-validator/
 ├── notebooks  
 │   ├── eda.ipynb           # Exploratory data analysis  
 ├── requirements.txt  
-├── results                 # Tentatively contains evaluation metrics results and prediction results  
+├── results                 # Tentatively contains evaluation metrics results and prediction results 
+│   ├── fine-tuned-distilbert/
+│   ├── checkpoint-XXX/ 
 ├── src                     # Data engineering and ML files  
 │   ├── data_processing.py  # Handles data processing, cleaning  
 ├── venv  
