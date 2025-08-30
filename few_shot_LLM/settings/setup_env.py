@@ -11,7 +11,7 @@ def decode_base64_to_env(encoded_file_path, env_file_path):
 
     # Write the decoded key to the .env file in the format OPENROUTER_API_KEY==<decoded_key>
     with open(env_file_path, 'w') as f:
-        f.write(f"OPENROUTER_API_KEY={decoded_key}\n")
+        f.write(f"{decoded_key}\n")
 
 def main():
     # Get the absolute path of the current script directory (settings)
