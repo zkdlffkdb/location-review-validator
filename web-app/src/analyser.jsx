@@ -5,7 +5,7 @@ import './App.css'
 export default function ReviewAnalyser() {
     const [results, setResults] = React.useState(null);
     const [loading, setLoading] = React.useState(false);
-    
+
     return (
 		<>
         <div>
@@ -22,6 +22,7 @@ export default function ReviewAnalyser() {
             <div className="greyContainer">
                <p> {results.review}</p>
             </div>
+               <p>Prediction: {results.prediction}</p>
           </div>
         ) : (
           <p style={{ fontSize: "16px", fontWeight: "normal" }}>input a review above for analysis!</p>
