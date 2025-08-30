@@ -20,6 +20,12 @@ function SampleCards() {
           being intrusive. Will definitely be coming back soon. Highly
           recommended!"
         </p>
+        <p className={styles.reviewText}>
+          <b>save the JSON file below to test our review analyser:</b>
+        </p>
+        <a className={styles.reviewText} href="/yakinikuLike.json" download>
+          download JSON file
+        </a>
       </div>
       <div className={styles.reviewCard}>
         <h2 className={styles.title}>Irrelevant review</h2>
@@ -36,6 +42,12 @@ function SampleCards() {
           my ice cream too quickly and could not test all the camera features of
           my phone. Overall happy with my purchase."
         </p>
+        <p className={styles.reviewText}>
+          <b>save the JSON file below to test our review analyser:</b>
+        </p>
+        <a className={styles.reviewText} href="/mixue.json" download>
+          download JSON file
+        </a>
       </div>
     </div>
   );
