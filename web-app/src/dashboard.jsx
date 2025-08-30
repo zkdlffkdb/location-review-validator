@@ -1,4 +1,5 @@
 import './App.css';
+import MetricsChart from './components/metricschart';
 
 export default function Dashboard() {
     return (
@@ -9,10 +10,12 @@ export default function Dashboard() {
         </div>
 
         <div style={{display: "flex", flexDirection: "row", gap: "20px"}}>
-            <div className="pageContainer">    
-            </div>
+        <div className="pageContainer" />
+        </div>
             <div className="pageContainer">
-            </div>
+            <h4 className="graphs">Model Performance</h4>
+            <p className="graphs">by review classifications</p>
+            <MetricsChart />
         </div>
         </>
     );
